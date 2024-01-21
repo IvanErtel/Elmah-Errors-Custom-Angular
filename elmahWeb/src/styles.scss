@@ -1,0 +1,47 @@
+@import 'bootstrap/scss/bootstrap.scss';
+@import 'bootstrap/scss/bootstrap-reboot.scss';
+@import 'bootstrap/scss/bootstrap-grid.scss';
+@import '../src/assets/theme/theme.scss';
+
+//Paquete de íconos
+@import "/src/assets/uicomponent/icomoon/styles";
+
+@font-face {
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("./assets/fonts/Inter-roman.var.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: "Italic";
+  src: url("./assets/fonts/Inter-italic.var.woff2") format("woff2");
+}
+
+:root {
+  font-family: "Inter var", sans-serif;
+  font-variation-settings: normal;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}

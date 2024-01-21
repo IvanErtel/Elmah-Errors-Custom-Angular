@@ -1,0 +1,31 @@
+  <div class="dialog-header">
+    <h2>Detalle del Error</h2>
+  </div>
+
+  <div class="dialog-content">
+    <!-- Muestra el detalle general (XML completo) -->
+    <p>{{ detalle }}</p>
+  
+    <div *ngIf="data.errorType || data.errorMessage || data.errorTime">
+      <h2>Información del Error</h2>
+      <p><strong>Type:</strong> {{ data.errorType }}</p>
+      <p><strong>Message:</strong> {{ data.errorMessage }}</p>
+      <p><strong>Time:</strong> {{ data.errorTime | date:'short' }}</p>
+    </div>
+
+    <div *ngIf="data.errorDetail">
+      <p><strong>Detalle:</strong></p>
+      <!-- mostramos los primeros 100 caracteres(o los que gusten) -->
+      <pre *ngIf="!mostrarDetalle">{{data.errorDetail | slice:0:100}}</pre>
+      <button class="custom-open-button"[ngClass]="{'open': mostrarDetalle}" *ngIf="data.errorDetail.length > 100" (click)="toggleDetail()">
+      {{mostrarDetalle ? 'mostrar menos': 'mostrar más'}}
+      </button>
+    </div>
+    <div *ngIf="mostrarDetalle">
+      <pre>{{data.errorDetail | slice:200}}</pre>
+    </div>
+  </div>
+
+  <div class="dialog-footer">
+    <button mat-button mat-dialog-close class="custom-close-button">Cerrar</button>
+  </div>

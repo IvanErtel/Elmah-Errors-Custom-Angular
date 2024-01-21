@@ -1,0 +1,83 @@
+<div class="container-fluid">
+  <div class="row">
+    <mat-card class="nav-logo">
+      <mat-card-content class="d-flex justify-content-between align-items-center">
+        <!-- Logo -->
+        <img src="/assets/aysa_logo_negativo.png" alt="Logo" class="logo-Aysa">
+        <h5 class="titulo">Error Log for Aysa.SIS</h5>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<!-- COMPONENTE LOADING  -->
+<app-skeleton *ngIf="loading"></app-skeleton>
+
+<!-- COMPONENTE FILTRO -->
+<app-search *ngIf="!loading" (filtroCambio)="onFiltroCambio($event)"></app-search>
+
+<!----- TABLA GRILLA --->
+<div class="container-fluid containerGrilla">
+  <div class="row">
+    <ng-container *ngIf="!loading">
+      <table mat-table [dataSource]="datos" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="host">
+          <th mat-header-cell *matHeaderCellDef sticky><mat-label>Host</mat-label></th>
+          <td mat-cell *matCellDef="let element" class="tdElementos"> {{element.host}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="statusCode">
+          <th mat-header-cell *matHeaderCellDef sticky><mat-label>Code</mat-label></th>
+          <td mat-cell *matCellDef="let element" class="tdElementos"> {{element.statusCode}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="message" class="columna-error">
+          <th mat-header-cell *matHeaderCellDef sticky><mat-label>Error</mat-label></th>
+          <td mat-cell *matCellDef="let element" [class.expandirCelda]="element.isExpanded" class="tdElementos"
+            style="width: 300px;">
+            {{element.isExpanded ? element.message : acortarMsj(element)}}
+            <span *ngIf="element.message.split(' ').length > 4" class="botonExpandir" (click)="detalleMsj(element)">
+              {{element.isExpanded ? 'cerrar' : '...'}}
+            </span>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="type" class="columna-detalles">
+          <th mat-header-cell *matHeaderCellDef sticky><mat-label>Type</mat-label></th>
+          <td mat-cell *matCellDef="let element" class="tdElementos"> {{element.type}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="user" class="columna-detalles">
+          <th mat-header-cell *matHeaderCellDef sticky><mat-label>User</mat-label></th>
+          <td mat-cell *matCellDef="let element" class="tdElementos"> {{element.user}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="date" class="columna-detalles">
+          <th mat-header-cell *matHeaderCellDef sticky><mat-label>Date</mat-label></th>
+          <td mat-cell *matCellDef="let element" class="tdElementos"> {{element.timeUtc | date: 'dd-MM-yy'}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="timeUtc" class="columna-detalles">
+          <th mat-header-cell *matHeaderCellDef sticky><mat-label>Time</mat-label></th>
+          <td mat-cell *matCellDef="let element" class="tdElementos">{{element.timeUtc | date: 'HH:mm:ss'}}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="detalles" class="columna-detalles">
+          <th mat-header-cell *matHeaderCellDef sticky></th>
+          <td mat-cell *matCellDef="let element" class="agrandar">
+            <span (click)="openDialog(element)" class="icon-search"></span>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </ng-container>
+    <mat-paginator [length]="totalItems" [pageSize]="paginatedQueryOptions.PageSize" [pageSizeOptions]="pageSizeOptions"
+      (page)="pageChange($event)" [showFirstLastButtons]>
+    </mat-paginator>
+
+  </div>
+</div>

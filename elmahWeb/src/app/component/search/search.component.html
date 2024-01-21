@@ -1,0 +1,18 @@
+<div class="search-container">
+  <mat-form-field class="custom-input">
+    <mat-label class="grilla-Label">Buscar</mat-label>
+    <input matInput [formControl]="hostFilter" (input)="emitfiltro()">
+  </mat-form-field>
+
+  <mat-form-field class="custom-datepicker">
+    <mat-label>Fecha</mat-label>
+    <mat-date-range-input [rangePicker]="picker" [formGroup]="fechaFormGroup" [comparisonStart]="fechaFormGroup.value.inicioDate" [comparisonEnd]="fechaFormGroup.value.finDate">
+      <input matStartDate placeholder="Inicio" id="fecha-inicio" formControlName="inicioDate" (dateChange)="emitFechaCambio($event)">
+      <input matEndDate placeholder="Fin" id="fecha-fin" formControlName="finDate" (dateChange)="emitFechaCambio($event)">
+    </mat-date-range-input>
+    <mat-datepicker-toggle matSuffix [for]="picker">
+      <mat-icon matDatepickerToggleIcon>event</mat-icon>
+    </mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+  </mat-form-field>
+</div>

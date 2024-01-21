@@ -1,0 +1,131 @@
+@use '@angular/material' as mat;
+
+@import '@angular/material/theming';
+
+@include mat-core();
+
+// ----------- Paleta de Colores ----------------
+$aysa-primary: (
+    50: #e7e9f3,
+    100: #c3c7e3,
+    200: #9ba4d0,
+    300: #7580bd,
+    400: #5865af,
+    500: #3b4ba2,
+    600: #354399,
+    700: #2d398d,
+    800: #253081,
+    900: #181f6b,
+    A100: #9dd4ff,
+    A200: #6abdff,
+    A400: #37a7ff,
+    A700: #1e9bff,
+    contrast: (50: #000000,
+        100: #000000,
+        200: #000000,
+        300: #000000,
+        400: #ffffff,
+        500: #ffffff,
+        600: #ffffff,
+        700: #ffffff,
+        800: #ffffff,
+        900: #ffffff,
+        A100: #000000,
+        A200: #000000,
+        A400: #000000,
+        A700: #000000)
+);
+
+$aysa-secondary: (
+    50: #f7f9fd,
+    100: #f0f2f7,
+    200: #e7e9ee,
+    300: #d7dade,
+    400: #b4b6ba,
+    500: #94969a,
+    600: #6c6e71,
+    700: #585a5e,
+    800: #3a3c3f,
+    900: #1a1b1e,
+    A100: #9dd4ff,
+    A200: #6abdff,
+    A400: #37a7ff,
+    A700: #1e9bff,
+    contrast: (50: #000000,
+        100: #000000,
+        200: #000000,
+        300: #000000,
+        400: #ffffff,
+        500: #ffffff,
+        600: #ffffff,
+        700: #ffffff,
+        800: #ffffff,
+        900: #ffffff,
+        A100: #000000,
+        A200: #000000,
+        A400: #000000,
+        A700: #000000)
+);
+
+$aysa-accent: (
+    50: #e1f6fd,
+    100: #b4e6fb,
+    200: #82d6f8,
+    300: #52c6f4,
+    400: #2db9f3,
+    500: #05adf2,
+    600: #009fe3,
+    700: #008ccf,
+    800: #007bbb,
+    900: #005b9a,
+    A100: #ffffff,
+    A200: #ffe3d8,
+    A400: #383736,
+    A700: #ffab8b,
+    contrast: (50: #ffffff,
+        100: #ffffff,
+        200: #ffffff,
+        300: #ffffff,
+        400: #ffffff,
+        500: #ffffff,
+        600: #ffffff,
+        700: #ffffff,
+        800: #ffffff,
+        900: #ffffff,
+        A100: #ffffff,
+        A200: #ffffff,
+        A400: #ffffff,
+        A700: #ffffff)
+);
+
+$primary-color-palette: mat-define-palette($aysa-primary, 800, 300);
+$accent-color-palette: mat-define-palette($aysa-accent, 600, 300);
+$warn-color-palette: mat-palette($mat-red, 600);
+
+$aysa-theme: mat.define-light-theme((color: (primary: $primary-color-palette,
+                accent: $accent-color-palette,
+                warn: $warn-color-palette )));
+
+@include angular-material-theme($aysa-theme);
+
+$colors : ("aysa-grey": #6c6e71,
+    "aysa-primary-800": #253081,
+    "aysa-primary-700": #2d398d,
+    "aysa-primary-600": #354399,
+    "aysa-primary-500": #3b4ba2,
+    "aysa-primary-400": #5865af,
+    "aysa-secondary-800": #007bbb,
+    "aysa-secondary-700": #008ccf,
+    "aysa-secondary-600": #009fe3,
+    "aysa-secondary-500": #05adf2,
+    "aysa-secondary-400": #2db9f3,
+);
+
+.mat-mdc-snack-bar-container {
+    &.error-snackbar {
+        --mdc-snackbar-container-color: #E53935;
+        --mat-mdc-snack-bar-button-color: #fff;
+        --mdc-snackbar-supporting-text-color: #fff;
+        --mat-snack-bar-button-color: #fff;
+    }
+}

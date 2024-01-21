@@ -1,0 +1,522 @@
+@import "./_variables.scss";
+
+@font-face {
+    font-family: '#{$icomoon-font-family}';
+    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?uad8dy');
+    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?uad8dy#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?uad8dy') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?uad8dy') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?uad8dy##{$icomoon-font-family}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: '#{$icomoon-font-family}' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    font-size: 20px;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-buscar {
+    &:before {
+        content: $icon-buscar;
+    }
+}
+
+.icon-acciones {
+    &:before {
+        content: $icon-acciones;
+    }
+}
+
+.icon-actualizar {
+    &:before {
+        content: $icon-actualizar;
+    }
+}
+
+.icon-afecta_conexion {
+    &:before {
+        content: $icon-afecta_conexion;
+    }
+}
+
+.icon-afectacion {
+    &:before {
+        content: $icon-afectacion;
+    }
+}
+
+.icon-afectado_tercero {
+    &:before {
+        content: $icon-afectado_tercero;
+    }
+}
+
+.icon-area_responsable {
+    &:before {
+        content: $icon-area_responsable;
+    }
+}
+
+.icon-arrow_afectacion {
+    &:before {
+        content: $icon-arrow_afectacion;
+    }
+}
+
+.icon-arrow_general {
+    &:before {
+        content: $icon-arrow_general;
+    }
+}
+
+.icon-arrow_left {
+    &:before {
+        content: $icon-arrow_left;
+    }
+}
+
+.icon-arrow-down {
+    &:before {
+        content: $icon-arrow-down;
+    }
+}
+
+.icon-auditoria {
+    &:before {
+        content: $icon-auditoria;
+    }
+}
+
+.icon-calendario {
+    &:before {
+        content: $icon-calendario;
+    }
+}
+
+.icon-cancelar {
+    &:before {
+        content: $icon-cancelar;
+    }
+}
+
+.icon-cargar_plantilla {
+    &:before {
+        content: $icon-cargar_plantilla;
+    }
+}
+
+.icon-check {
+    &:before {
+        content: $icon-check;
+    }
+}
+
+.icon-comentarios {
+    &:before {
+        content: $icon-comentarios;
+    }
+}
+
+.icon-comunicacion {
+    &:before {
+        content: $icon-comunicacion;
+    }
+}
+
+.icon-critico {
+    &:before {
+        content: $icon-critico;
+    }
+}
+
+.icon-emergencia {
+    &:before {
+        content: $icon-emergencia;
+    }
+}
+
+.icon-exportar {
+    &:before {
+        content: $icon-exportar;
+    }
+}
+
+.icon-falla_suministros {
+    &:before {
+        content: $icon-falla_suministros;
+    }
+}
+
+.icon-falta_agua {
+    &:before {
+        content: $icon-falta_agua;
+    }
+}
+
+.icon-falta_presion {
+    &:before {
+        content: $icon-falta_presion;
+    }
+}
+
+.icon-favorito {
+    &:before {
+        content: $icon-favorito;
+    }
+}
+
+.icon-fecha_cambio {
+    &:before {
+        content: $icon-fecha_cambio;
+    }
+}
+
+.icon-filtro {
+    &:before {
+        content: $icon-filtro;
+    }
+}
+
+.icon-grandes_usuarios {
+    &:before {
+        content: $icon-grandes_usuarios;
+    }
+}
+
+.icon-imprimir {
+    &:before {
+        content: $icon-imprimir;
+    }
+}
+
+.icon-informacion_adicional {
+    &:before {
+        content: $icon-informacion_adicional;
+    }
+}
+
+.icon-mapa {
+    &:before {
+        content: $icon-mapa;
+    }
+}
+
+.icon-notificaciones {
+    &:before {
+        content: $icon-notificaciones;
+    }
+}
+
+.icon-nro_corte {
+    &:before {
+        content: $icon-nro_corte;
+    }
+}
+
+.icon-nuevo {
+    &:before {
+        content: $icon-nuevo;
+    }
+}
+
+.icon-odt {
+    &:before {
+        content: $icon-odt;
+    }
+}
+
+.icon-orden {
+    &:before {
+        content: $icon-orden;
+    }
+}
+
+.icon-orden_grilla {
+    &:before {
+        content: $icon-orden_grilla;
+    }
+}
+
+.icon-ordenar_grilla {
+    &:before {
+        content: $icon-ordenar_grilla;
+    }
+}
+
+.icon-programado {
+    &:before {
+        content: $icon-programado;
+    }
+}
+
+.icon-servicio_agua {
+    &:before {
+        content: $icon-servicio_agua;
+    }
+}
+
+.icon-taponamiento_desborde {
+    &:before {
+        content: $icon-taponamiento_desborde;
+    }
+}
+
+.icon-taponamiento_desborde_lluvia {
+    &:before {
+        content: $icon-taponamiento_desborde_lluvia;
+    }
+}
+
+.icon-taponamiento_sin_desborde {
+    &:before {
+        content: $icon-taponamiento_sin_desborde;
+    }
+}
+
+.icon-taponamiento_sin_desborde_calle {
+    &:before {
+        content: $icon-taponamiento_sin_desborde_calle;
+    }
+}
+
+.icon-tipo_afectacion {
+    &:before {
+        content: $icon-tipo_afectacion;
+    }
+}
+
+.icon-trabajo_realizar {
+    &:before {
+        content: $icon-trabajo_realizar;
+    }
+}
+
+.icon-turbiedad {
+    &:before {
+        content: $icon-turbiedad;
+    }
+}
+
+.icon-usuario {
+    &:before {
+        content: $icon-usuario;
+    }
+}
+
+.icon-mas_horas {
+    &:before {
+        content: $icon-mas_horas;
+    }
+}
+
+.icon-plazo_no_cumplido {
+    &:before {
+        content: $icon-plazo_no_cumplido;
+    }
+}
+
+.icon-eliminar {
+    &:before {
+        content: $icon-eliminar;
+    }
+}
+
+.icon-editar {
+    &:before {
+        content: $icon-editar;
+    }
+}
+
+.icon-gestion_monitoreo {
+    &:before {
+        content: $icon-gestion_monitoreo;
+    }
+}
+
+.icon-usuarios_sensibles {
+    &:before {
+        content: $icon-usuarios_sensibles;
+    }
+}
+
+.icon-reportes {
+    &:before {
+        content: $icon-reportes;
+    }
+}
+
+.icon-seguridad {
+    &:before {
+        content: $icon-seguridad;
+    }
+}
+
+.icon-configuracion {
+    &:before {
+        content: $icon-configuracion;
+    }
+}
+
+.icon-informacion_sistema {
+    &:before {
+        content: $icon-informacion_sistema;
+    }
+}
+
+.icon-favorito_activado {
+    &:before {
+        content: $icon-favorito_activado;
+    }
+}
+
+.icon-salir {
+    &:before {
+        content: $icon-salir;
+    }
+}
+
+.icon-ayuda {
+    &:before {
+        content: $icon-ayuda;
+    }
+}
+
+.icon-bitacora {
+    &:before {
+        content: $icon-bitacora;
+    }
+}
+
+.icon-calles {
+    &:before {
+        content: $icon-calles;
+    }
+}
+
+.icon-capas {
+    &:before {
+        content: $icon-capas;
+    }
+}
+
+.icon-cortes_superpuestos {
+    &:before {
+        content: $icon-cortes_superpuestos;
+    }
+}
+
+.icon-distrito {
+    &:before {
+        content: $icon-distrito;
+    }
+}
+
+.icon-edificios {
+    &:before {
+        content: $icon-edificios;
+    }
+}
+
+.icon-error {
+    &:before {
+        content: $icon-error;
+    }
+}
+
+.icon-exito {
+    &:before {
+        content: $icon-exito;
+    }
+}
+
+.icon-gestion {
+    &:before {
+        content: $icon-gestion;
+    }
+}
+
+.icon-map_base {
+    &:before {
+        content: $icon-map_base;
+    }
+}
+
+.icon-parametros {
+    &:before {
+        content: $icon-parametros;
+    }
+}
+
+.icon-perfil {
+    &:before {
+        content: $icon-perfil;
+    }
+}
+
+.icon-region {
+    &:before {
+        content: $icon-region;
+    }
+}
+
+.icon-guardar {
+    &:before {
+        content: $icon-guardar;
+    }
+}
+
+.icon-tiempo {
+    &:before {
+        content: $icon-tiempo;
+    }
+}
+
+.icon-monitoreo {
+    &:before {
+        content: $icon-monitoreo;
+    }
+}
+
+.icon-capas_region {
+    &:before {
+        content: $icon-capas_region;
+    }
+}
+
+.icon-area_servida {
+    &:before {
+        content: $icon-area_servida;
+    }
+}
+
+.icon-arco_calle {
+    &:before {
+        content: $icon-arco_calle;
+    }
+}
+
+.icon-decorados {
+    &:before {
+        content: $icon-decorados;
+    }
+}
+
+.icon-listado_calles {
+    &:before {
+        content: $icon-listado_calles;
+    }
+}
