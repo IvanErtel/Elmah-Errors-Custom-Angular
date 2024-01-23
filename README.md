@@ -1,4 +1,4 @@
-# Nombre del Proyecto
+# Elmah Custom
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](URL_DEL_ESTADO_DE_COMPILACIÓN)
 [![.NET Version](https://img.shields.io/badge/.NET-Versión_Usada-blue.svg)](https://dotnet.microsoft.com/es-es/)
@@ -24,8 +24,8 @@ Nuestra iniciativa se enfocó en transformar esta interfaz, manteniendo todas la
 
 Visualiza el impacto de nuestra modernización en la interfaz de usuario de ELMAH. Las imágenes a continuación muestran la transformación lograda.
 
-![Interfaz Original de ELMAH](../ElmaErrores/elmahWeb/src/assets/readme-assets/elmah.png)
-![Interfaz Mejorada](../ElmaErrores/elmahWeb/src/assets/readme-assets/elmah-aysa.PNG)
+![Interfaz Original de ELMAH](ElmaErrores/elmahWeb/src/assets/readme-assets/elmah.png)
+![Interfaz Mejorada](ElmaErrores/elmahWeb/src/assets/readme-assets/elmah-aysa.PNG)
 
 ### Requisitos Previos
 
@@ -94,8 +94,8 @@ Puedes instalarlos o actualizarlos a través del administrador de paquetes NuGet
 
 ### IMPORTANTE
 - Modifica los siguientes archivos con datos de tu aplicación para poder observar los resultados.
-![Modifica el archivo enviroment para pegarle a la url de tu api](../ElmaErrores/elmahWeb/src/assets/readme-assets/ApiUrl.PNG)
-![modifica el conection string para apuntarle a tu tabla de elmah](../ElmaErrores/elmahWeb/src/assets/readme-assets/ApiBack.PNG)
+![Modifica el archivo enviroment para pegarle a la url de tu api](ElmaErrores/elmahWeb/src/assets/readme-assets/ApiUrl.PNG)
+![modifica el conection string para apuntarle a tu tabla de elmah](ElmaErrores/elmahWeb/src/assets/readme-assets/ApiBack.PNG)
 
 ## 📝 Notas Adicionales
 
